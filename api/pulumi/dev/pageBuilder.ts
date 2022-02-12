@@ -82,7 +82,7 @@ class PageBuilder {
             timeout: 10,
             memorySize: 128,
             description:
-                "Updates default Page Builder app's settings, e.g. website or prerendering URLs, default title, etc.",
+                "Updates default Page Builder app's settings, e.g. website, default title, etc.",
             code: new pulumi.asset.AssetArchive({
                 ".": new pulumi.asset.FileArchive("../code/pageBuilder/updateSettings/build")
             }),

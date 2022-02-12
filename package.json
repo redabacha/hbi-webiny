@@ -67,10 +67,7 @@
       "api/code/headlessCMS",
       "api/code/pageBuilder/updateSettings",
       "api/code/pageBuilder/importPages/*",
-      "api/code/pageBuilder/exportPages/*",
-      "api/code/prerenderingService/render",
-      "api/code/prerenderingService/flush",
-      "api/code/prerenderingService/queue/*"
+      "api/code/pageBuilder/exportPages/*"
     ]
   },
   "scripts": {

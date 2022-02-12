@@ -5955,31 +5955,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@webiny/api-prerendering-service-aws@npm:5.22.1":
-  version: 5.22.1
-  resolution: "@webiny/api-prerendering-service-aws@npm:5.22.1"
-  dependencies:
-    "@babel/runtime": 7.16.7
-    "@webiny/api-prerendering-service": 5.22.1
-    "@webiny/handler": 5.22.1
-    "@webiny/handler-args": 5.22.1
-    "@webiny/plugins": 5.22.1
-  checksum: a242ab4f6a13b69f702bd64a686c763e928617747381e961304ecd4c71948984163369433d552837b27d371ec06623db6f5501629c945267255e38edac6ba280
-  languageName: node
-  linkType: hard
-
-"@webiny/api-prerendering-service-so-ddb@npm:5.22.1":
-  version: 5.22.1
-  resolution: "@webiny/api-prerendering-service-so-ddb@npm:5.22.1"
-  dependencies:
-    "@babel/runtime": 7.16.7
-    "@webiny/api-prerendering-service": 5.22.1
-    "@webiny/error": 5.22.1
-    dynamodb-toolbox: 0.3.5
-  checksum: 69547093bcfd8ba6d1362d9c726bbf610c7dfa297102afb0ba4e14535ae2d0f100a8068e7d1d9fd6a61c4598ef2a3d4a2a6c4440e0956c901787185a21a345f8
-  languageName: node
-  linkType: hard
-
 "@webiny/api-prerendering-service@npm:5.22.1":
   version: 5.22.1
   resolution: "@webiny/api-prerendering-service@npm:5.22.1"
@@ -7829,7 +7804,6 @@ __metadata:
     "@webiny/api-page-builder-import-export": 5.22.1
     "@webiny/api-page-builder-import-export-so-ddb": 5.22.1
     "@webiny/api-page-builder-so-ddb": 5.22.1
-    "@webiny/api-prerendering-service": 5.22.1
     "@webiny/api-security": 5.22.1
     "@webiny/api-security-cognito": 5.22.1
     "@webiny/api-security-so-ddb": 5.22.1
@@ -7984,64 +7958,6 @@ __metadata:
     "@webiny/api-page-builder-so-ddb": 5.22.1
     "@webiny/cli": 5.22.1
     "@webiny/handler-aws": 5.22.1
-    "@webiny/project-utils": 5.22.1
-  languageName: unknown
-  linkType: soft
-
-"api-prerendering-service-flush@workspace:api/code/prerenderingService/flush":
-  version: 0.0.0-use.local
-  resolution: "api-prerendering-service-flush@workspace:api/code/prerenderingService/flush"
-  dependencies:
-    "@webiny/api-prerendering-service": 5.22.1
-    "@webiny/api-prerendering-service-aws": 5.22.1
-    "@webiny/api-prerendering-service-so-ddb": 5.22.1
-    "@webiny/cli": 5.22.1
-    "@webiny/db-dynamodb": 5.22.1
-    "@webiny/handler-aws": 5.22.1
-    "@webiny/handler-db": 5.22.1
-    "@webiny/project-utils": 5.22.1
-  languageName: unknown
-  linkType: soft
-
-"api-prerendering-service-queue-add@workspace:api/code/prerenderingService/queue/add":
-  version: 0.0.0-use.local
-  resolution: "api-prerendering-service-queue-add@workspace:api/code/prerenderingService/queue/add"
-  dependencies:
-    "@webiny/api-prerendering-service": 5.22.1
-    "@webiny/api-prerendering-service-so-ddb": 5.22.1
-    "@webiny/cli": 5.22.1
-    "@webiny/db-dynamodb": 5.22.1
-    "@webiny/handler-aws": 5.22.1
-    "@webiny/handler-db": 5.22.1
-    "@webiny/project-utils": 5.22.1
-  languageName: unknown
-  linkType: soft
-
-"api-prerendering-service-queue-process@workspace:api/code/prerenderingService/queue/process":
-  version: 0.0.0-use.local
-  resolution: "api-prerendering-service-queue-process@workspace:api/code/prerenderingService/queue/process"
-  dependencies:
-    "@webiny/api-prerendering-service": 5.22.1
-    "@webiny/api-prerendering-service-so-ddb": 5.22.1
-    "@webiny/cli": 5.22.1
-    "@webiny/db-dynamodb": 5.22.1
-    "@webiny/handler-aws": 5.22.1
-    "@webiny/handler-db": 5.22.1
-    "@webiny/project-utils": 5.22.1
-  languageName: unknown
-  linkType: soft
-
-"api-prerendering-service-render@workspace:api/code/prerenderingService/render":
-  version: 0.0.0-use.local
-  resolution: "api-prerendering-service-render@workspace:api/code/prerenderingService/render"
-  dependencies:
-    "@webiny/api-prerendering-service": 5.22.1
-    "@webiny/api-prerendering-service-aws": 5.22.1
-    "@webiny/api-prerendering-service-so-ddb": 5.22.1
-    "@webiny/cli": 5.22.1
-    "@webiny/db-dynamodb": 5.22.1
-    "@webiny/handler-aws": 5.22.1
-    "@webiny/handler-db": 5.22.1
     "@webiny/project-utils": 5.22.1
   languageName: unknown
   linkType: soft

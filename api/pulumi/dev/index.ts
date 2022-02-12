@@ -6,7 +6,6 @@ import ApiGateway from "./apiGateway";
 import Cloudfront from "./cloudfront";
 import FileManager from "./fileManager";
 import PageBuilder from "./pageBuilder";
-import PrerenderingService from "./prerenderingService";
 
 // Among other things, this determines the amount of information we reveal on runtime errors.
 // https://www.webiny.com/docs/how-to-guides/environment-variables/#debug-environment-variable
@@ -20,15 +19,6 @@ export default () => {
     const dynamoDb = new DynamoDB();
     const cognito = new Cognito();
     const fileManager = new FileManager();
-
-    const prerenderingService = new PrerenderingService({
-        env: {
-            DB_TABLE: dynamoDb.table.name,
-            DEBUG
-        },
-        primaryDynamodbTable: dynamoDb.table,
-        bucket: fileManager.bucket
-    });
 
     const pageBuilder = new PageBuilder({
         env: {
@@ -50,11 +40,6 @@ export default () => {
             COGNITO_REGION: String(process.env.AWS_REGION),
             COGNITO_USER_POOL_ID: cognito.userPool.id,
             DB_TABLE: dynamoDb.table.name,
-
-            PRERENDERING_RENDER_HANDLER: prerenderingService.functions.render.arn,
-            PRERENDERING_FLUSH_HANDLER: prerenderingService.functions.flush.arn,
-            PRERENDERING_QUEUE_ADD_HANDLER: prerenderingService.functions.queue.add.arn,
-            PRERENDERING_QUEUE_PROCESS_HANDLER: prerenderingService.functions.queue.process.arn,
             S3_BUCKET: fileManager.bucket.id,
             IMPORT_PAGES_CREATE_HANDLER: pageBuilder.functions.importPages.create.arn,
             EXPORT_PAGES_PROCESS_HANDLER: pageBuilder.functions.exportPages.process.arn,
@@ -122,8 +107,6 @@ export default () => {
         cognitoAppClientId: cognito.userPoolClient.id,
         cognitoUserPoolPasswordPolicy: cognito.userPool.passwordPolicy,
         updatePbSettingsFunction: pageBuilder.functions.updateSettings.arn,
-        psQueueAdd: prerenderingService.functions.queue.add.arn,
-        psQueueProcess: prerenderingService.functions.queue.process.arn,
         dynamoDbTable: dynamoDb.table.name
     };
 };
