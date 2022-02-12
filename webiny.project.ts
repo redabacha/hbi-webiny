@@ -1,6 +1,5 @@
 import cliWorkspaces from "@webiny/cli-plugin-workspaces";
 import cliPulumiDeploy from "@webiny/cli-plugin-deploy-pulumi";
-import cliAwsTemplate from "@webiny/cwp-template-aws/cli";
 
 // Scaffolds.
 import cliScaffold from "@webiny/cli-plugin-scaffold";
@@ -12,11 +11,13 @@ import cliScaffoldReactApp from "@webiny/cli-plugin-scaffold-react-app";
 import cliScaffoldReactComponent from "@webiny/cli-plugin-scaffold-react-component";
 import cliScaffoldCiCd from "@webiny/cli-plugin-scaffold-ci";
 
+// modified cli from https://github.com/webiny/webiny-js/tree/next/packages/cwp-template-aws/cli
+import cliAwsTemplate from "./cli";
+
 // Admin Area CLI plugins.
 import adminPlugins from "./apps/admin/cli";
 
 export default {
-    template: "@webiny/cwp-template-aws@5.22.1",
     name: "hbi-webiny",
     cli: {
         plugins: [
